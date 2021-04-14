@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    private static int[] arrFirst = {1, 4, 5, 3, 7, 2, 4, 16, 4, 9};
+    private static int[] arrFirst = {1, 4, 5, 3, 7, 2, 4, 8, 4, 9};
     private static ArrayList<Integer> arrSecond;
     private static String uocSo = "";
     private static TimCapUocSo timCapUocSo;
