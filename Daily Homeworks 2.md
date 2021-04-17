@@ -24,18 +24,16 @@ Hãy nêu ý nghĩa 3 trạng thái của file trong git (3 stages in git). Các
 
 
 *
-- Trạng thái 1: Working Directory
-  Là các untrackeđ file trong máy của chúng ta, có thể là bất kì file nào và Git Local chưa theo dõi/ biết về nó
+- Trạng thái 1: Modified
+  Là các trackeđ file trong máy của chúng ta được sửa đổi nhưng chưa được lưu vào git (chưa được đánh dấu), do đó nó không ảnh hưởng đến phiên bản trước đó của file này đã được lưu trong git
+- Trạng thái 2: Staged
+  + Là các tracked file đã được đánh dấu để sẽ commit lưu vào git
+  + Để chuyển đổi từ trạng thái Modified sang Staged, ta sử dụng lệnh 
+git add . (để đánh dấu tất cả các tracked file) hoặc git add <tên file> (add 1 file cụ thể
 
-- Trạng thái 2: Staging Area
-  + Là kho chứa các file ở Git Local đã được chuyển đổi từ trạng thái Untracked File sang Tracked file để Git có thể theo dõi chúng 
-  + Để chuyển đổi từ Untracked File sang Tracked File, ta sử dụng lệnh 
-git add . (để add tất cả các untracked file) hoặc git add <tên file> (add 1 file cụ thể
+- Trạng thái 3: Commited
++ Là trạng thái cuối cùng của file sau khi được commit từ trạng thái staged. Nó sẽ tiến hành lưu phiên bản mới nhất của file này vào trong git
++ Câu lệnh sử dụng: git commit –m “<message>”
 
-- Trạng thái 3: Reponsitory
- + Đây là nơi chúng ta đẩy toàn bộ các file đã được tracked ở trong Staging Area lên Git Server với điều kiện là source file đã được remote với Reponsitory
-(git  init -> git remote add origin <Link cua resposi tren git hub>. Sau đó sử dụng lệnh git remote, nếu hiện ra origin thì chúng ta đã remote thành công)
- + Để đẩy toàn bộ dữ liệu ở Staging Area lên Repository, ta sử dụng lệnh
-git push origin master 
 
 
